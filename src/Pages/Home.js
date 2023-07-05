@@ -41,9 +41,10 @@ class Home extends React.Component {
                             <div className='spinner'></div>
                         </div>
                     </div>
+                   
                 </div>
                 <div className="btn-container">
-                    <a className='home-btn-cv' href='#'>Mon CV</a>
+                    <a className='home-btn-cv' href='#' download>Mon CV</a>
                 </div>
             </section>
         )
