@@ -294,3 +294,32 @@ source : https://codepen.io/jakejarvis/pen/pBZWZw
     padding: 10px;
   }
 }
+
+
+
+/* footer */
+.footer-container{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(137, 43, 226, 0.325);
+  padding: 2rem 0;
+  z-index: 999;
+
+}
+
+.footer-text-right a{
+  color: #fff;
+  text-decoration: none;
+  padding: 0 .5rem;
+  transition: transform 2s ease;
+
+}
+
+.footer-text-right svg:hover{
+  transform: scale(1.3);
+}
