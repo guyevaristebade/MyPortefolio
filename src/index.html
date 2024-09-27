@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <title>My Portefolio</title>
+</head>
+<body>
+    <!-- Menu de navigation -->
+    <nav>
+        <div class="nav-logo">Guy B</div>
+        <div class="responsive">
+            <i class="burger ri-menu-fold-4-line"></i>
+        </div>
+        <div class="nav-links-container">
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experiences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hire-me">
+                <a href="#">Engagez moi</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="container" id="about">      
+        <div class="content">
+            <div class="blur"></div>
+            <div class="blur"></div>
+            <h4>DEVELOPPEUR FULL STACK EN HERBE</h4>
+            <h1>Bonjour, je suis <span>Guy</span>, Diplomé d'un bachelor en informatique</h1>
+            <p>
+                Passionné par la création d'applications web et mobile, je me spécialise en JavaScript et TypeScript. J'adore résoudre des défis techniques et <span>je cherche une opportunité en alternance</span> pour devenir développeur full-stack.
+            </p>
+        </div>
+        <div class="image">
+            <img src="./img/header.png" alt="header image ">
+        </div>
+    </header>
+    <!-- About -->
+    <section class="container" id="about">
+        <h2 class="section-title">MES EXPÉRIENCES</h2>
+        <div class="xp">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Apprenti developpeur web</h3>
+                    <p class="card-date">Septembre 2023 - Août 2024</p>
+                </div>
+                <div class="card-body">
+                    <p>
+                        Lors de cette expérience, j'ai travaillé sur la création de nouveaux outils pour l'entreprise. J'ai eu à résoudre des bugs et à écrire de la documentation utilisateur.
+                    </p>
+                    <div class="stack">
+                        <h3>Stack technique</h3>
+                        <ul class="stack-tech">
+                            <li>JavaScript</li>
+                            <li>PHP</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h3>Stage : développeur wordpress</h3>
+                    <p class="card-date">Septembre 2023 - Août 2024</p>
+                </div>
+                <div class="card-body">
+                    <p>
+                        Lors de cette expérience, j'ai travaillé sur la création de nouveaux outils pour l'entreprise. J'ai eu à résoudre des bugs et à écrire de la documentation utilisateur.
+                    </p>
+                    <div class="stack">
+                        <h3>Stack technique</h3>
+                        <ul class="stack-tech">
+                            <li>Wordpress</li>
+                            <li>PHP</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Experiences -->
+    <section class="container" id="experience"></section>
+
+    <!-- Projets -->
+    <section class="container" id="projets"></section>
+
+    <!-- Contact -->
+    <section class="container" id="contact"></section>
+
+
+    <script>
+        const burger = document.querySelector('.burger');
+        
+        const navLinks = document.querySelector('.nav-links-container');
+
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
