@@ -167,6 +167,11 @@ header .content p span{
     margin-bottom: 1rem;
 }
 
+.card h2{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
 
 .stack-tech{
     display: flex;
@@ -180,6 +185,12 @@ header .content p span{
     border: 1px solid rgb(103,106,238);
     /* background-color: rgb(103,106,238); */
     border-radius: 5px;
+}
+
+.site-link{
+    color : rgb(103,106,238);
+    font-weight: 700;
+    transition: all 0.5s ease;
 }
 
 
