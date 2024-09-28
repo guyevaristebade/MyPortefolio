@@ -9,10 +9,6 @@
     outline: none;
 }
 
-/* body{
-    scroll-behavior: smooth;
-} */
-
 a{
     text-decoration: none;
     color: #fff;
@@ -30,9 +26,10 @@ img{
 body{
     background-color: #18181B;
     font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
+    margin-top: 10rem;
 }
-body{
+
+html{
     scroll-behavior: smooth;
 }
 
@@ -41,15 +38,27 @@ body{
     margin: auto;
     padding: 5rem 2rem;
 }
+
 /* Nav */
+/* 
+Lorsqu'on rajoute position fixed 
+il faut gérer la largeur avec max-width
+ainsi que le positionnement par rapport à la fenêtre principale avec right top left bottom
+*/
 nav{
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
     padding: 2rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
+    position: fixed;
+    z-index: 100;
+    background-color: #18181B;
+    right: 0;
+    left: 0;
+    top: 0;
 }
 
 .responsive{
@@ -82,8 +91,31 @@ nav{
     list-style: none;
     align-items: center;
     gap: 3rem;
-
 }
+
+
+
+.nav-links li a {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px; 
+}
+
+.nav-links li a::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: rgb(103, 106, 238);
+    bottom: 0;
+    left: 0; 
+    transition: width 0.3s ease; 
+}
+
+.nav-links li a:hover::before {
+    width: 100%;
+}
+
 
 .hire-me a{
     padding: .5rem .7rem;
@@ -158,7 +190,7 @@ header .content p span{
     transition: all .3s ease;
 }
 
-.xp .card:hover{
+.xp .card:hover, .competence-container .card:hover{
     border-color: #fff;
     background-color: #323232;
 }
@@ -183,7 +215,6 @@ header .content p span{
 .stack-tech li{
     padding: .5rem;
     border: 1px solid rgb(103,106,238);
-    /* background-color: rgb(103,106,238); */
     border-radius: 5px;
 }
 
@@ -193,13 +224,240 @@ header .content p span{
     transition: all 0.5s ease;
 }
 
+.qualites{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.qualite{
+    background-color:#323232;
+    text-align: center;
+    padding: .5rem 2rem;
+    border-radius: 8px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    transition: .5s ease-in-out ;
+}
+
+.qualite:hover{
+    background-color: rgb(103, 106, 238);
+}
+
+/* Compétences */
+
+#competences p{
+    color: #ccc;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.competence-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+
+.competence-container .card{
+    background-color: #27272a;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    padding: 1rem;
+    transition: all .3s ease;
+}
+
+.competence-container .card:hover{
+    border-color: #fff;
+    background-color: #323232;
+}
+
+.competence-container .card h3{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.card-body-item{
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.card-body-item span{
+    font-weight: 700;
+}
+
+.progress-bar {
+    height: 10px;
+    width: 100%;
+    border-radius: 15px;
+    background-color: rgba(186, 174, 174, 0.368);
+}
+
+.progress-bar .skill-per{
+    background-color: rgb(103, 106, 238); 
+    height: 100%;
+    border-radius: 15px; 
+    display: block;
+    position: relative;
+    cursor: pointer;
+    animation: progress .4s ease-in-out forwards; 
+    opacity: 0;
+}
+
+
+@keyframes progress {
+    0%{
+        width: 0;
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+
+/* Styles spécifiques pour chaque compétence */
+.skill-per.html {
+    width: 100%; /* HTML à 100% */
+}
+
+.skill-per.css {
+    width: 70%; 
+}
+
+.skill-per.js-ts {
+    width: 70%; 
+}
+
+.skill-per.node {
+    width: 85%;
+}
+
+.skill-per.mongodb {
+    width: 75%;
+}
+
+.skill-per.nb {
+    width: 90%;
+}
+
+.skill-per.api {
+    width: 80%;
+}
+
+.skill-per.sql {
+    width: 80%;
+}
+
+.skill-per.react {
+    width: 55%; 
+}
+.skill-per.ant {
+    width: 80%; 
+}
+
+.skill-per.git {
+    width: 70%; 
+}
+
+.skill-per::before {
+    content: attr(data-tooltip); 
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(103, 106, 238, 0.8);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.skill-per:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mes projets  */
+
+.projet-uni .card-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+
+
+.projet-uni h3{
+    color : #fff;
+    border-bottom: 1px solid rgb(103, 106, 238);
+    margin-bottom: 2rem;
+    padding-bottom: .5rem;
+}
+
+.projet-uni .card-container .card{
+    background-color: #27272a;
+    color: #fff;
+    background-color: #27272a;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    padding: 1rem;
+    transition: all .3s ease;
+}
+
+.projet-uni .card-container .card h4{
+    text-align: center;
+    margin: 1rem;
+}
+
+.projet-uni .card-container .card .stack-tech{
+    display: block;
+}
+
+
+.projet-uni .card-container .card .stack-tech h5{
+    margin-bottom: 1rem;
+}
+
+.projet-uni .card-container .card .stack-tech .technos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+
+.projet-uni .card-container .card .stack-tech .technos p{
+    padding: .5rem 1rem;
+    background-color: rgb(103, 106, 238);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+}
+
+.projet-perso h3{
+    color : #fff;
+    border-bottom: 1px solid rgb(103, 106, 238);
+    padding-bottom: .5rem;
+    margin: 4rem 0 2rem 0;
+}
+
+
+
+
 
 @media (max-width: 800px) {
     
     .nav-links-container {
         display: flex;
         flex-direction: column;
-        background-color: rgba(101, 93, 93, 0.8);
+        background-color: #27272a;
         position: absolute;
         top: 100px;
         right: 0;
@@ -233,8 +491,9 @@ header .content p span{
         grid-area:  1/1/2/2;
     }
 
-    /* about */
-    .xp{
+    /* compétences */
+    .xp, .competence-container, .projet-uni .card-container{
         grid-template-columns: repeat(1, 1fr);
+
     }
 }
