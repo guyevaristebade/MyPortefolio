@@ -411,7 +411,7 @@ header .content p span{
     transition: all .3s ease;
 }
 
-.projet-uni .card-container .card h4{
+.projet-uni .card-container .card h4, .projet-perso .card-container .card h4{
     text-align: center;
     margin: 1rem;
 }
@@ -441,16 +441,57 @@ header .content p span{
     gap: .2rem;
 }
 
-.projet-perso h3{
+.projet-perso{
     color : #fff;
+}
+
+.projet-perso h3{
+    /* color : #fff; */
     border-bottom: 1px solid rgb(103, 106, 238);
     padding-bottom: .5rem;
     margin: 4rem 0 2rem 0;
 }
 
+.projet-perso .card-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
 
 
 
+.projet-perso .card-container .card{
+    background-color: #27272a;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    padding: 1rem;
+    transition: all .3s ease;
+}
+
+#contact div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+#contact div a{
+    padding: 1rem 2rem;
+    background-color: #27272a;
+}
+
+
+
+#contact div a i{
+    margin-right: .2rem;
+}
+
+footer{
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #27272a;
+    color: #fff;
+}
 
 @media (max-width: 800px) {
     
