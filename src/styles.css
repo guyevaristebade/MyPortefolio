@@ -116,17 +116,22 @@ nav{
     width: 100%;
 }
 
+.hire-me {
+    cursor: pointer ;
+}
+
 
 .hire-me a{
     padding: .5rem .7rem;
     background-color:rgb(103,106,238);
     border-radius: .2rem;
     border : 1px solid rgb(103,106,238);
-    transition: all .2s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 
 .hire-me a:hover{
-    background-color:rgb(103,106,238);
+    background-color: transparent;
+    border : 1px solid rgb(103,106,238);
 }
 
 header {
@@ -353,10 +358,15 @@ header .content p span{
 }
 
 .skill-per.react {
-    width: 55%; 
+    width: 80%; 
 }
+
 .skill-per.ant {
     width: 80%; 
+}
+
+.skill-per.tailwind {
+    width: 70%; 
 }
 
 .skill-per.git {
