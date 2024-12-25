@@ -480,6 +480,7 @@ header .content p span{
 #contact div{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     padding: 2rem;
     gap: 2rem;
@@ -505,7 +506,7 @@ footer{
     color: #fff;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 910px) {
     
     .nav-links-container {
         display: flex;
