@@ -594,6 +594,18 @@ footer {
   border: 1px solid rgb(103, 106, 238);
 }
 
+/* Section Contact */
+#contact {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.contact-form {
+  color: #fff;
+}
+
 @media (max-width: 910px) {
   .img-logo {
     height: 50px;
