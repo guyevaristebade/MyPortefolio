@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./src/img/IMG_2445.PNG" type="image/x-icon">
     <link rel="stylesheet" href="./src/styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
@@ -13,20 +14,22 @@
   <body>
     <!-- Menu de navigation -->
     <nav>
-      <div class="nav-logo">Guy B</div>
+      <a class="nav-logo" href="/">
+        <img class="img-logo" src="./src/img/IMG_2445.PNG" alt="logo">
+        Guy B
+      </a>
       <div class="responsive">
         <i class="burger ri-menu-fold-4-line"></i>
       </div>
       <div class="nav-links-container">
         <ul class="nav-links">
-          <li><a href="#about">À propos</a></li>
           <li><a href="#experiences">Experiences</a></li>
           <li><a href="#competences">Compétences</a></li>
           <li><a href="#projets">Projets</a></li>
-          <!-- <li><a href="#contact">Contact</a></li> -->
+          <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="hire-me">
-          <a href="./src/CV_Guy_BADE.pdf" target="_blank">Engagez-moi</a>
+          <a href="./src/documents/CV_Guy_BADE.pdf" target="_blank">Engagez-moi</a>
         </div>
       </div>
     </nav>
@@ -37,35 +40,26 @@
         <div class="blur"></div>
         <div class="blur"></div>
         <h4>Apprenti Ingénieur</h4>
-        <h1>Bonjour, je suis <span>Guy</span>,</h1>
+        <h1>Bonjour, je suis <span>Guy</span></h1>
         <p>
-          Actuellement titulaire d’un Bac +3, je recherche une alternance pour
-          développer mes compétences en <span>informatique </span> dans un
-          environnement professionnel stimulant. <span>Passionné</span> par les
-          technologies web, je suis motivé à contribuer activement à vos projets
-          tout en acquérant une expérience concrète pour affiner mes
-          connaissances techniques. <span>Dynamique</span> et
-          <span>opiniâtre</span>, je suis prêt à m'investir pleinement dans vos
-          projets.
+          Actuellement titulaire d’un Bac +3, je suis à la  recherche une <span>alternance</span> Dans le but d'intégrer un master en conception de système et cybersécurité.
         </p>
         <div class="qualites">
-          <a class="qualite" target="_blank"
-          href="https://github.com/guyevaristebade"
-          rel="noopener">
-            <i class="ri-github-fill"></i>
-            <span>Github</span> 
-          <a
-            class="qualite"
-            href="https://www.linkedin.com/in/guy-bade-67743019b/"
-            rel="noopener"
-            target="_blank"
-          >
-            <i class="ri-linkedin-box-fill"></i>
-            <span>Linkedin</span>
-          </a>
-          <!-- <span class="qualite">Dynamique</span>
-          <span class="qualite">Esprit d'équipe</span>
-          <span class="qualite">bon relationnel</span> -->
+            <a class="download_cv" href="./src/documents/CV_Guy_BADE.pdf" download="CV_Guy_BADE.pdf" target="_blank">Téléchargez mon cv</a> 
+          <div class="social">
+            <a class="qualite" target="_blank"
+            href="https://github.com/guyevaristebade"
+            rel="noopener">
+              <i class="ri-github-fill"></i>
+            <a
+              class="qualite"
+              href="https://www.linkedin.com/in/guy-bade-67743019b/"
+              rel="noopener"
+              target="_blank"
+            >
+              <i class="ri-linkedin-box-fill"></i>
+            </a>
+          </div>
         </div>
       </div>
       <div class="image">
@@ -143,96 +137,13 @@
       </p> -->
 
       <div class="competence-container">
-        <div class="card">
-          <h3>Front-End</h3>
-          <div class="card-body">
-            <div class="card-body-item">
-              <span>HTML</span>
-              <div class="progress-bar">
-                <div class="skill-per html" data-tooltip="100%"></div>
-              </div>
-            </div>
-            <div class="card-body-item">
-              <span>CSS</span>
-              <div class="progress-bar">
-                <div class="skill-per css" data-tooltip="70%"></div>
-              </div>
-            </div>
-            <div class="card-body-item">
-              <span>JavaScript / Typescript</span>
-              <div class="progress-bar">
-                <div class="skill-per js-ts" data-tooltip="70%"></div>
-              </div>
-            </div>
-
-            <!--  -->
-            <div class="card-body-item">
-              <span>React.js</span>
-              <div class="progress-bar">
-                <div class="skill-per react" data-tooltip="80%"></div>
-              </div>
-            </div>
-            <div class="card-body-item">
-              <span>Ant-Design</span>
-              <div class="progress-bar">
-                <div class="skill-per ant" data-tooltip="80%"></div>
-              </div>
-            </div>
-            <div class="card-body-item">
-              <span>Tailwind CSS</span>
-              <div class="progress-bar">
-                <div class="skill-per tailwind" data-tooltip="70%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Back-End</h3>
-          <div class="card-body">
-            <div class="card-body-item">
-              <span>Node.js</span>
-              <div class="progress-bar">
-                <div class="skill-per node" data-tooltip="85%"></div>
-              </div>
-            </div>
-            <div class="card-body-item">
-              <span>MongoDB</span>
-              <div class="progress-bar">
-                <div class="skill-per mongodb" data-tooltip="75%"></div>
-              </div>
-            </div>
-            <div class="card-body-item">
-              <span>SQL</span>
-              <div class="progress-bar">
-                <div class="skill-per sql" data-tooltip="80%"></div>
-              </div>
-            </div>
-            <div class="card-body-item">
-              <span>API Rest</span>
-              <div class="progress-bar">
-                <div class="skill-per api" data-tooltip="80%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Divers</h3>
-          <div class="card-body">
-            <div class="card-body-item">
-              <span>Git / Github</span>
-              <div class="progress-bar">
-                <div class="skill-per git" data-tooltip="70%"></div>
-              </div>
-            </div>
-            <div class="card-body-item">
-              <span>Nuit blanche</span>
-              <div class="progress-bar">
-                <div class="skill-per nb" data-tooltip="90%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <img src="./src/img/svg/ant.svg" alt="ant-design">
+        <img src="./src/img/svg/NextJS.svg" alt="NextJS">
+        <img src="./src/img/svg/React.svg" alt="react">
+        <img src="./src/img/svg/tailwind.svg" alt="tailwind">
+        <img src="./src/img/svg/nodeJs.svg" alt="typescript">
+        <img src="./src/img/svg/typescript.svg" alt="typescript">
+        <img src="./src/img/svg/github.svg" alt="github">
       </div>
     </section>
 
@@ -244,7 +155,7 @@
         <!-- <h3>MES PROJETS ACADÉMIQUE</h3> -->
         <div class="card-container">
           <div class="card">
-            <div class="image">
+            <div class="image-projet">
               <img src="./src/img/dsmx.png" alt="" />
             </div>
             <h4>React Components Metric X</h4>
@@ -278,7 +189,7 @@
             </div>
           </div>
           <div class="card">
-            <div class="image">
+            <div class="image-projet">
               <img src="./src/img/budget_Buddy.png" alt="projet budget buddy" />
             </div>
             <h4>Budget Buddy</h4>
@@ -336,6 +247,12 @@
         </div> -->
     </section>
 
+    <div class="scroll-top">
+      <a href="#about">
+        <i class="ri-arrow-up-line"></i>
+      </a>
+
+    </div>
     <!-- Contact -->
     <!-- <section class="container" id="contact">
       <h2 class="section-title">CONTACT</h2>
@@ -364,6 +281,16 @@
       burger.addEventListener("click", () => {
         navLinks.classList.toggle("active");
       });
+
+      const scrollTop = document.querySelector(".scroll-top");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 100) {
+          scrollTop.style.display = "block";
+        } else {
+          scrollTop.style.display = "none";
+        }
+      }); 
     </script>
   </body>
 </html>
