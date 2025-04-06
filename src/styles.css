@@ -190,12 +190,19 @@ header .content h1 span {
 
 header .content p {
   color: #ccc;
-  margin-top: 1.5rem;
+  margin: 1.5rem 0;
 }
 
-header .content p span {
+header .content p span,
+div span {
   font-weight: 700;
-  color: rgb(103, 106, 238);
+  color: #ccc;
+}
+
+header .content div p span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .blur {
